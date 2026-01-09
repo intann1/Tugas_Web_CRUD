@@ -1,6 +1,7 @@
 <?php
-include "koneksi.php";
+$koneksi = mysqli_connect("localhost", "root", "", "db_kampus");
 
-mysqli_query($cnn,"CREATE DATABASE db_akademik");
-echo "Database berhasil dibuat";
+if (!$koneksi) {
+    die("Koneksi database gagal");
+}
 ?>

@@ -1,16 +1,14 @@
 <?php
-$cnn = mysqli_connect("localhost","root","","db_akademik");
+include "koneksi_db.php";
 
-mysqli_query($cnn,"CREATE TABLE user (
-    username VARCHAR(20) PRIMARY KEY,
-    password VARCHAR(20)
-)");
-
-mysqli_query($cnn,"CREATE TABLE matakuliah (
-    kode_mk VARCHAR(10) PRIMARY KEY,
-    nama_mk VARCHAR(50),
+$sql = "CREATE TABLE matakuliah (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    kode_mk VARCHAR(20),
+    nama_mk VARCHAR(100),
     sks INT
-)");
+)";
 
+mysqli_query($koneksi, $sql);
 echo "Tabel berhasil dibuat";
 ?>
+

@@ -1,6 +1,8 @@
 <?php
-$cnn = mysqli_connect("localhost","root","");
-if(!$cnn){
+$koneksi = mysqli_connect("localhost","root","db_kampus");
+
+if(!$koneksi){
     die("Koneksi gagal");
 }
 ?>
+

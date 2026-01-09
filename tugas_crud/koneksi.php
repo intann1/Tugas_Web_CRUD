@@ -1,8 +1,9 @@
 <?php
-$koneksi = mysqli_connect("localhost","root","db_kampus");
+$koneksi = mysqli_connect("localhost","root","");
 
 if(!$koneksi){
     die("Koneksi gagal");
 }
 ?>
+
 
